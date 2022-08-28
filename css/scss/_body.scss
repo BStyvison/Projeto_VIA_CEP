@@ -10,6 +10,9 @@ span {
 }
 
 .container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 24px auto 54px;
     padding-top: 30px;
     display: grid;
     grid-template-columns: 400px 1fr;
@@ -25,14 +28,62 @@ span {
         height: 95px;
         border-radius: 16px;
         margin-bottom: 15px;
+        position: relative;
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
     }
     &__opcoes {
         & .menu__opcao {
             background-color: #ffffff;
             max-width: 328px;
-            height: 72px;
+            min-height: 72px;
             border-radius: 16px;
-            margin-bottom: 8px;
+            display: flex;
+            margin: 8px 0px;
+            padding: 10px 0px;
+            cursor: pointer;
+
+                & a {
+                    display: flex;
+                    flex-direction: row;
+                    -webkit-box-align: center;
+                    align-items: center;
+                    -webkit-box-pack: justify;
+                    justify-content: space-around;
+                    border-left: none;
+                    padding-left: 3px;
+                    gap: 10px;
+                    text-decoration: none;
+
+                    img {
+                        height: 27px;
+                        width: 27px;
+                        margin: 4px;
+                    }
+
+                    div {
+                        span {
+                            font-size: 16px;
+                            color: #333333;
+                        }
+                        p {
+                            font-size: 14px;
+                            color: #999999;
+                        }
+                    }
+
+
+                    [alt^="seta"] {
+                        width: 7px;
+                        height: 12px;
+                    }
+                }
+            
 
         }
 

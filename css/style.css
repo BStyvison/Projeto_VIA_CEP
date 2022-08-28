@@ -40,6 +40,9 @@ span.link {
 }
 
 .container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 24px auto 54px;
   padding-top: 30px;
   display: grid;
   grid-template-columns: 400px 1fr;
@@ -56,13 +59,53 @@ span.link {
   height: 95px;
   border-radius: 16px;
   margin-bottom: 15px;
+  position: relative;
+}
+.menu__conta img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 .menu__opcoes .menu__opcao {
   background-color: #ffffff;
   max-width: 328px;
-  height: 72px;
+  min-height: 72px;
   border-radius: 16px;
-  margin-bottom: 8px;
+  display: flex;
+  margin: 8px 0px;
+  padding: 10px 0px;
+  cursor: pointer;
+}
+.menu__opcoes .menu__opcao a {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-around;
+  border-left: none;
+  padding-left: 3px;
+  gap: 10px;
+  text-decoration: none;
+}
+.menu__opcoes .menu__opcao a img {
+  height: 27px;
+  width: 27px;
+  margin: 4px;
+}
+.menu__opcoes .menu__opcao a div span {
+  font-size: 16px;
+  color: #333333;
+}
+.menu__opcoes .menu__opcao a div p {
+  font-size: 14px;
+  color: #999999;
+}
+.menu__opcoes .menu__opcao a [alt^=seta] {
+  width: 7px;
+  height: 12px;
 }
 
 .menu__cep {
