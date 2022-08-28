@@ -14,17 +14,16 @@ span {
     width: 100%;
     margin: 24px auto 54px;
     padding-top: 30px;
-    display: grid;
-    grid-template-columns: 400px 1fr;
-    justify-content: center;
-    gap: 30px;
+    display: flex;
+    flex: 1 1;
+    flex-direction: row;
+    min-height: 500px;
 }
 
 .menu {
     align-items: center;
     &__conta {
         background-color: #ffffff;
-        max-width: 328px;
         height: 95px;
         border-radius: 16px;
         margin-bottom: 15px;
@@ -34,13 +33,12 @@ span {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 100%;
+            width: 81%;
         }
     }
     &__opcoes {
         & .menu__opcao {
             background-color: #ffffff;
-            max-width: 328px;
             min-height: 72px;
             border-radius: 16px;
             display: flex;
@@ -91,12 +89,11 @@ span {
 }
 
 .menu__cep {
-    background-color: #ffffff;
-    height: 927px;
+    margin-top: 0px;
+    margin-left: 24px;
+    width: 87%;
+    background-color: rgb(255, 255, 255);
     border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
     padding: 32px;
     h2 {
         font-size: 24px;
@@ -122,7 +119,7 @@ span {
             border-radius: 8px;
             border: 1px solid rgb(153, 153, 153);
             font-size: 1rem;
-            margin-top: 8px;
+            margin-top: 10px;
             padding: 16px 15px;
             box-sizing: border-box;
         }
