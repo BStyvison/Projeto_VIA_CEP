@@ -26,3 +26,41 @@ ol, ul {
   font-size: 18px;
   padding-left: 15px;
 }
+
+body {
+  background-color: #f1f1f1;
+}
+
+span {
+  color: red;
+}
+
+.container {
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.menu__conta {
+  background-color: #ffffff;
+  width: 328px;
+  height: 95px;
+  border-radius: 16px;
+  margin-bottom: 15px;
+}
+.menu__opcoes .menu__opcao {
+  background-color: #ffffff;
+  width: 328px;
+  height: 72px;
+  border-radius: 16px;
+  margin-bottom: 8px;
+}
+
+.menu__cep {
+  background-color: #ffffff;
+  width: 928px;
+  height: 927px;
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
