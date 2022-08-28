@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.nav {
+  height: 72px;
+  background-color: #f80032;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav__seach .seach {
+  width: 760px;
+  height: 40px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 10px 15px 0px;
+  border-radius: 8px;
+  color: #666666;
+  text-align: start;
+  font-size: 18px;
+  padding-left: 15px;
+}
