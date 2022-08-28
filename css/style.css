@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 ol, ul {
@@ -32,25 +33,30 @@ body {
 }
 
 span {
-  color: red;
+  color: #fc0d1b;
 }
 
 .container {
   padding-top: 30px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 400px 1fr;
+  justify-content: center;
+  gap: 30px;
 }
 
+.menu {
+  align-items: center;
+}
 .menu__conta {
   background-color: #ffffff;
-  width: 328px;
+  max-width: 328px;
   height: 95px;
   border-radius: 16px;
   margin-bottom: 15px;
 }
 .menu__opcoes .menu__opcao {
   background-color: #ffffff;
-  width: 328px;
+  max-width: 328px;
   height: 72px;
   border-radius: 16px;
   margin-bottom: 8px;
@@ -58,9 +64,50 @@ span {
 
 .menu__cep {
   background-color: #ffffff;
-  width: 928px;
   height: 927px;
   border-radius: 16px;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px;
+}
+.menu__cep h2 {
+  font-size: 24px;
+  color: #666666;
+  margin-bottom: 6px;
+}
+.menu__cep p {
+  color: #333333;
+  font-size: 12px;
+}
+.menu__cep form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.menu__cep form label {
+  color: #666666;
+  font-size: 16px;
+}
+.menu__cep form input {
+  height: 48px;
+  border-radius: 8px;
+  box-shadow: none;
+}
+.menu__cep form #destinatario {
+  width: 330px;
+}
+.menu__cep form #cep {
+  width: 165px;
+}
+.menu__cep form a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fc0d1b;
+  font-size: 16px;
+}
+.menu__cep form button {
+  width: 220px;
+  height: 48px;
+  border-radius: 8px;
 }
