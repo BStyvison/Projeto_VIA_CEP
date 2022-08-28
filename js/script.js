@@ -14,3 +14,35 @@ function filterNumbers(event) {
     }
 
 }
+
+//Get address event
+cepInput.addEventListener('keyup', verificarCep)
+
+function verificarCep(event) {
+    const inputValue = event.target.value
+
+    if(inputValue.length === 8) {
+        getAddress(inputValue)
+    }
+}
+
+const getAddress = async (cep) => {
+    cepInput.blur()
+    try {
+        const apiUrl = `https://viacep.com.br/ws/${cep}/json/` 
+
+        const responseDados = await fetch(apiUrl)
+        
+        const dadosJson = await responseDados.json()
+    
+        console.log(dadosJson)
+    }
+    catch(erro) {
+        console.log(Error(erro))
+
+    }
+
+}
+
+// Show or hider loader
+
