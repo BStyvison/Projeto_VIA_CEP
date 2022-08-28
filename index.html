@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Americanas mais</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 
     <header>
@@ -42,21 +44,53 @@
                     <p><span>*</span>campo obrigatório</p>
                 </div>
 
-                <form action="/">
+                <form action="/" class="form">
                     <label for="destinatario"><span>*</span>nome do destinatário</label>
                     <input type="text" name="destinatario" id="destinatario" required>
 
                     <label for="cep"><span>*</span>cep</label>
                     <input type="text" name="cep" id="cep" placeholder="_____-___" minlength="8" maxlength="8" required>
-                    <a href="#">não sei meu cep</a>
-                    <button id="cep__btn" type="submit" >salvar endereço</button>
+                    <a href="https://buscacepinter.correios.com.br/app/endereco/index.php?t" target="_blank">não sei meu cep</a>
+
+
+                    <label for="endereco"><span>*</span>endereço</label>
+                    <input type="text" name="endereco" id="endereco" required>
+
+
+                    <div class="form__numero">
+                        <div>
+                            <label for="numero"><span>*</span>número</label>
+                            <input type="text" name="numero" id="numero"  required>
+                        </div>
+                        <span class="link">+ adicionar complemento</span>
+                    </div>
+                    <span class="link">+ adicionar referência</span>
+
+
+                    <label for="bairro"><span>*</span>bairro</label>
+                    <input type="text" name="bairro" id="bairro"cidade required>
+
+
+                    <label for="cidade"><span>*</span>cidade</label>
+                    <input type="text" name="cidade" id="cidade" required>
+
+
+                    <label for="estado"><span>*</span>estado</label>
+                    <input type="text" name="estado" id="estado" minlength="2" maxlength="2" required>
+
+
+
+                    <button id="cep__btn" type="submit">salvar endereço</button>
+
+
                 </form>
 
             </section>
         </div>
     </main>
-    
+
 
     <script src="./js/script.js"></script>
 </body>
+
 </html>

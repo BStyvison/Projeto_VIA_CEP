@@ -35,6 +35,9 @@ body {
 span {
   color: #fc0d1b;
 }
+span.link {
+  cursor: pointer;
+}
 
 .container {
   padding-top: 30px;
@@ -80,33 +83,33 @@ span {
   color: #333333;
   font-size: 12px;
 }
-.menu__cep form {
+.menu__cep .form {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-.menu__cep form label {
+.menu__cep .form label {
   color: #666666;
   font-size: 16px;
 }
-.menu__cep form input {
+.menu__cep .form input {
   height: 48px;
   border-radius: 8px;
   box-shadow: none;
 }
-.menu__cep form #destinatario {
+.menu__cep .form #destinatario {
   width: 330px;
 }
-.menu__cep form #cep {
+.menu__cep .form #cep {
   width: 165px;
 }
-.menu__cep form a {
+.menu__cep .form a {
   display: inline-block;
   text-decoration: none;
   color: #fc0d1b;
   font-size: 16px;
 }
-.menu__cep form button {
+.menu__cep .form button {
   width: 220px;
   height: 48px;
   border-radius: 8px;
@@ -115,4 +118,11 @@ span {
   color: #ffffff;
   border: 0px;
   font-weight: bold;
+}
+.menu__cep .form__numero {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
 }
