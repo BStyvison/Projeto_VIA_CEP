@@ -1,4 +1,8 @@
 const cepInput = document.querySelector('#cep')
+const addressInput = document.querySelector("#endereco");
+const cityInput = document.querySelector("#cidade");
+const stateInput = document.querySelector('#estado')
+const districtInput = document.querySelector('#bairro')
 
 
 //validate CEP input
@@ -29,13 +33,19 @@ function verificarCep(event) {
 const getAddress = async (cep) => {
     cepInput.blur()
     try {
-        const apiUrl = `https://viacep.com.br/ws/${cep}/json/` 
-
+        const apiUrl = `https://viacep.com.br/ws/${cep}/json/`
         const responseDados = await fetch(apiUrl)
-        
         const dadosJson = await responseDados.json()
-    
+
         console.log(dadosJson)
+    
+        
+        addressInput.value = dadosJson.logradouro
+        districtInput.value = dadosJson.bairro
+        cityInput.value = dadosJson.localidade
+        stateInput.value = dadosJson.uf
+        
+
     }
     catch(erro) {
         console.log(Error(erro))
