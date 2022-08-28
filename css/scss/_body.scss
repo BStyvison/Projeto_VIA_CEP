@@ -6,6 +6,7 @@ span {
     color: #fc0d1b;
     &.link{
         cursor: pointer;
+        padding-top: 36px;
     }
 }
 
@@ -21,6 +22,7 @@ span {
 
 .menu {
     align-items: center;
+    max-width: 325px;
 
     &__voltar {
         display: flex;
@@ -67,10 +69,10 @@ span {
                     -webkit-box-align: center;
                     align-items: center;
                     -webkit-box-pack: justify;
-                    justify-content: space-around;
+                    justify-content: space-between;
                     border-left: none;
                     padding-left: 3px;
-                    gap: 10px;
+                    gap: 8px;
                     text-decoration: none;
 
                     img {
@@ -106,7 +108,7 @@ span {
 .menu__cep {
     margin-top: 0px;
     margin-left: 24px;
-    width: 87%;
+    width: 100%;
     background-color: rgb(255, 255, 255);
     border-radius: 16px;
     padding: 32px;
@@ -134,20 +136,39 @@ span {
             border-radius: 8px;
             border: 1px solid rgb(153, 153, 153);
             font-size: 1rem;
-            margin-top: 10px;
+            margin-top: 8px;
             padding: 16px 15px;
             box-sizing: border-box;
         }
-        #destinatario{
-            width: 330px;
+
+        &__geral {
+            max-width: 400px;
+            margin-top: 34px;
+            display: flex;
+            flex-direction: column;
+
+
         }
 
-        #cep {
-            width: 165px;
+        &__cep {
+            &__inside {
+                display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;
+
+            #cep {
+                width: 220px;
+            }
+            }
+
         }
+
+
+
         #endereco {
-            width: 330px;
             background-color: rgb(241, 241, 241);
+            cursor: not-allowed
         }
         a {
             display: inline-block;
@@ -175,29 +196,32 @@ span {
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
+                #numero {
+                    width: 98px;
+                }
             }
         }
 
         #bairro {
-            width: 330px;
             background-color: rgb(241, 241, 241);
             cursor: not-allowed
         }
 
         #cidade {
-            width: 240px;
             background-color: rgb(241, 241, 241);
+            cursor: not-allowed
         }
 
         #estado {
-            width: 240px;
             background-color: rgb(241, 241, 241);
+            cursor: not-allowed
         }
 
         &__toggle {
             display: flex;
             justify-content: space-between;
             width: 238px;
+            flex-direction: row;
             span {
                 color: #666666;
             }

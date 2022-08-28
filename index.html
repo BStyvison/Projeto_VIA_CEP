@@ -15,7 +15,10 @@
         <nav>
             <ul class="nav">
                 <li class="nav__logo"><img src="img/logobranca.svg" alt="Logo"></li>
-                <li class="nav__seach"><input class="seach" type="text" placeholder="busque aqui seu produto"></li>
+                <li class="nav__seach">
+                    <input class="seach" type="text" placeholder="busque aqui seu produto">
+                    <button><img src="img/Lupa.svg" alt="Lupa"></button>
+                </li>
                 <li class="nav__conta"><img src="img/image_2022-08-27_22-52-45.png" alt="conta"></li>
             </ul>
         </nav>
@@ -24,12 +27,14 @@
     <main>
         <div class="container">
             <section class="menu">
-                <div class="menu__conta"><img src="img/lateral/image_2022-08-28_16-13-04.png" alt="Login"></div>
+                <div class="menu__conta">
+                    <img src="img/lateral/image_2022-08-28_16-13-04.png" alt="Login">
+                </div>
                 <div class="menu__opcoes">
                     <div class="menu__opcao">
                         <a href="#">
                             <img src="img/lateral/pedidos.svg" alt="pedidos">
-                            <div>
+                            <div class="menu__opcao__item">
                                 <span>Pedidos</span>
                                 <p>acompanhar envio, ver Nota Fiscal</p>
                             </div>
@@ -39,7 +44,7 @@
                     <div class="menu__opcao">
                         <a href="#">
                             <img src="img/lateral/favoritos.svg" alt="">
-                            <div>
+                            <div class="menu__opcao__item">
                                 <span>favoritos</span>
                                 <p>ver Produtos que você favoritou</p>
                             </div>
@@ -49,7 +54,7 @@
                     <div class="menu__opcao">
                         <a href="#">
                             <img src="img/lateral/vale.svg" alt="vale">
-                            <div>
+                            <div class="menu__opcao__item">
                                 <span>vales</span>
                                 <p>ve e desbloquear seus vales</p>
                             </div>
@@ -59,7 +64,7 @@
                     <div class="menu__opcao">
                         <a href="#">
                             <img src="img/lateral/gitcard.svg" alt="git card">
-                            <div>
+                            <div class="menu__opcao__item">
                                 <span>gift card</span>
                                 <p>cadastro</p>
                             </div>
@@ -69,7 +74,7 @@
                     <div class="menu__opcao">
                         <a href="#">
                             <img src="img/lateral/cadastro.svg" alt="cadastro">
-                            <div>
+                            <div class="menu__opcao__item">
                                 <span>cadastro</span>
                                 <p>ver e alteras seus dados, seu e-mail e sua senha</p>
                             </div>
@@ -79,7 +84,7 @@
                     <div class="menu__opcao">
                         <a href="#">
                             <img src="img/lateral/endereco.svg" alt="endereco">
-                            <div>
+                            <div class="menu__opcao__item">
                                 <span>endereços</span>
                                 <p>ver e alterar seus endereços</p>
                             </div>
@@ -89,7 +94,7 @@
                     <div class="menu__opcao">
                         <a href="">
                             <img src="img/lateral/cartoes.svg" alt="cartoes">
-                            <div>
+                            <div class="menu__opcao__item">
                                 <span>cartões</span>
                                 <p>ver seus cartões caastrados</p>
                             </div>
@@ -99,7 +104,7 @@
                     <div class="menu__opcao">
                         <a href="#">
                             <img src="img/lateral/perguntas.svg" alt="perguntas frequentes">
-                            <div>
+                            <div class="menu__opcao__item">
                                 <span>perguntas frequentes</span>
                                 <p>consultar pergutas e respostas frequentes</p>
                             </div>
@@ -109,7 +114,7 @@
                     <div class="menu__opcao">
                         <a href="">
                             <img src="img/lateral/privacidade.svg" alt="privacidade">
-                            <div>
+                            <div class="menu__opcao__item">
                                 <span>privacidade</span>
                                 <p>ver política de privacidade, relatórios de dados e gerenciar as notificaçoes</p>
                             </div>
@@ -119,7 +124,7 @@
                     <div class="menu__opcao">
                         <a href="#">
                             <img src="img/lateral/preferencias.svg" alt="preferencias">
-                            <div>
+                            <div class="menu__opcao__item">
                                 <span>preferência de e-mail e mensagem</span>
                                 <p>escolher receber notificações por e-mail e SMS</p>
                             </div>
@@ -133,10 +138,10 @@
 
 
             <section class="menu__cep">
-                <span class="menu__voltar">
+<!--                 <span class="menu__voltar">
                     <img src="img/setavermelha.svg" alt="seta">
                     voltar
-                </span>
+                </span> -->
 
                 <div>
                     <h2>novo endereço</h2>
@@ -144,19 +149,27 @@
                 </div>
 
                 <form action="/" class="form">
-                    <label for="destinatario"><span>*</span>nome do destinatário</label>
-                    <input type="text" name="destinatario" id="destinatario" required>
+                    <div class="form__geral form__destinatario">
+                        <label for="destinatario"><span>*</span>nome do destinatário</label>
+                        <input type="text" name="destinatario" id="destinatario" required>
+                    </div>
 
-                    <label for="cep"><span>*</span>cep</label>
-                    <input type="text" name="cep" id="cep" placeholder="_____-___" minlength="8" maxlength="8" required>
-                    <a href="https://buscacepinter.correios.com.br/app/endereco/index.php?t" target="_blank">não sei meu cep</a>
+                    <div class="form__geral form__cep">
+                        <label for="cep"><span>*</span>cep</label>
+                        <div class="form__cep__inside">
+                            <input type="text" name="cep" id="cep" placeholder="_____-___" minlength="8" maxlength="8" required>
+                            <a href="https://buscacepinter.correios.com.br/app/endereco/index.php?t" target="_blank">não sei meu cep</a>
+                        </div>
+                    </div>
 
 
-                    <label for="endereco"><span>*</span>endereço</label>
-                    <input type="text" name="endereco" id="endereco" required>
+                    <div class="form__geral">
+                        <label for="endereco"><span>*</span>endereço</label>
+                        <input type="text" name="endereco" id="endereco" required disabled>
+                    </div>
 
 
-                    <div class="form__numero">
+                    <div class="form__geral form__numero">
                         <div class="form__caixa">
                             <label for="numero"><span>*</span>número</label>
                             <input type="text" name="numero" id="numero" required>
@@ -166,18 +179,24 @@
                     <span class="link">+ adicionar referência</span>
 
 
-                    <label for="bairro"><span>*</span>bairro</label>
-                    <input type="text" name="bairro" id="bairro" cidade required>
+                    <div class="form__geral">
+                        <label for="bairro"><span>*</span>bairro</label>
+                        <input type="text" name="bairro" id="bairro" cidade required disabled>
+                    </div>
 
 
-                    <label for="cidade"><span>*</span>cidade</label>
-                    <input type="text" name="cidade" id="cidade" required>
+                    <div class="form__geral">
+                        <label for="cidade"><span>*</span>cidade</label>
+                        <input type="text" name="cidade" id="cidade" required disabled>
+                    </div>
 
 
-                    <label for="estado"><span>*</span>estado</label>
-                    <input type="text" name="estado" id="estado" minlength="2" maxlength="2" required>
+                    <div class="form__geral">
+                        <label for="estado"><span>*</span>estado</label>
+                        <input type="text" name="estado" id="estado" minlength="2" maxlength="2" required disabled>
+                    </div>
 
-                    <div class="form__toggle">
+                    <div class="form__geral form__toggle">
                         <span>Endereço principal</span>
                         <div class="cl-toggle-switch">
                             <label class="cl-switch">
@@ -189,7 +208,9 @@
 
 
 
-                    <button id="cep__btn" type="submit">salvar endereço</button>
+                    <div class="form__geral">
+                        <button id="cep__btn" type="submit">salvar endereço</button>
+                    </div>
 
 
                 </form>
