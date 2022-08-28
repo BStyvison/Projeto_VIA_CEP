@@ -18,7 +18,7 @@ ol, ul {
 }
 .nav__seach {
   display: grid;
-  width: 726px;
+  width: 760px;
   grid-auto-flow: column;
   grid-template-columns: 1fr;
   grid-auto-columns: max-content;
@@ -69,7 +69,7 @@ span {
 }
 span.link {
   cursor: pointer;
-  padding-top: 36px;
+  padding-top: 23px;
 }
 
 .container {
@@ -112,11 +112,11 @@ span.link {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 81%;
+  width: 89%;
 }
 .menu__opcoes .menu__opcao {
   background-color: #ffffff;
-  min-height: 72px;
+  min-height: 75px;
   border-radius: 16px;
   display: flex;
   margin: 8px 0px;
@@ -173,7 +173,6 @@ span.link {
 .menu__cep .form {
   display: flex;
   flex-direction: column;
-  /* gap: 24px; */
 }
 .menu__cep .form label {
   color: #666666;
@@ -190,7 +189,7 @@ span.link {
 }
 .menu__cep .form__geral {
   max-width: 400px;
-  margin-top: 34px;
+  margin-top: 26px;
   display: flex;
   flex-direction: column;
 }
@@ -233,7 +232,6 @@ span.link {
 .menu__cep .form__numero .form__caixa {
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 .menu__cep .form__numero .form__caixa #numero {
   width: 98px;

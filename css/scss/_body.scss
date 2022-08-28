@@ -6,7 +6,7 @@ span {
     color: #fc0d1b;
     &.link{
         cursor: pointer;
-        padding-top: 36px;
+        padding-top: 23px;
     }
 }
 
@@ -50,13 +50,13 @@ span {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 81%;
+            width: 89%;
         }
     }
     &__opcoes {
         & .menu__opcao {
             background-color: #ffffff;
-            min-height: 72px;
+            min-height: 75px;
             border-radius: 16px;
             display: flex;
             margin: 8px 0px;
@@ -124,7 +124,6 @@ span {
     .form {
         display: flex;
         flex-direction: column;
-        /* gap: 24px; */
 
         label {
             color: #666666;
@@ -143,7 +142,7 @@ span {
 
         &__geral {
             max-width: 400px;
-            margin-top: 34px;
+            margin-top: 26px;
             display: flex;
             flex-direction: column;
 
@@ -195,7 +194,6 @@ span {
             .form__caixa{
                 display: flex;
                 flex-direction: column;
-                gap: 15px;
                 #numero {
                     width: 98px;
                 }
