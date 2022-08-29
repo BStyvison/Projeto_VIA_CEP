@@ -32,28 +32,33 @@ function verificarCep(event) {
 }
 
 const getAddress = async (cep) => {
+    toggleLoader()
     cepInput.blur()
     try {
         const apiUrl = `https://viacep.com.br/ws/${cep}/json/`
         const responseDados = await fetch(apiUrl)
         const dadosJson = await responseDados.json()
 
-
-        hidderDisplay.forEach(item => {
-            item.removeAttribute('data-display')
-        }) 
-
+        setTimeout(() => {
+            hidderDisplay.forEach(item => {
+                item.removeAttribute('data-display')
+            }) 
     
-        
-        addressInput.value = dadosJson.logradouro
-        districtInput.value = dadosJson.bairro
-        cityInput.value = dadosJson.localidade
-        stateInput.value = dadosJson.uf
+            addressInput.value = dadosJson.logradouro
+            districtInput.value = dadosJson.bairro
+            cityInput.value = dadosJson.localidade
+            stateInput.value = dadosJson.uf
+            toggleLoader()
+        }, 550)
+
         
 
     }
     catch(erro) {
         console.log(Error(erro))
+        setTimeout(() => {
+            toggleLoader()
+        }, 550)
 
     }
 

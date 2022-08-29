@@ -1,18 +1,19 @@
-svg {
+.form__cep__loader {
     width: 3.25em;
     transform-origin: center;
     animation: rotate4 2s linear infinite;
+    circle {
+        fill: none;
+        stroke: #fc0d1b;
+        stroke-width: 2;
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+        stroke-linecap: round;
+        animation: dash4 1.5s ease-in-out infinite;
+       }
    }
    
-   circle {
-    fill: none;
-    stroke: #fc0d1b;
-    stroke-width: 2;
-    stroke-dasharray: 1, 200;
-    stroke-dashoffset: 0;
-    stroke-linecap: round;
-    animation: dash4 1.5s ease-in-out infinite;
-   }
+
    
    @keyframes rotate4 {
     100% {

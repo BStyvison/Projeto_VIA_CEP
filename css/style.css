@@ -148,6 +148,9 @@ span.link {
   width: 27px;
   margin: 4px;
 }
+.menu__opcoes .menu__opcao a div {
+  width: 250px;
+}
 .menu__opcoes .menu__opcao a div span {
   font-size: 16px;
   color: #333333;
@@ -269,13 +272,12 @@ span.link {
   margin-top: 20px;
 }
 
-svg {
+.form__cep__loader {
   width: 3.25em;
   transform-origin: center;
   animation: rotate4 2s linear infinite;
 }
-
-circle {
+.form__cep__loader circle {
   fill: none;
   stroke: #fc0d1b;
   stroke-width: 2;
