@@ -163,9 +163,15 @@ span {
             flex-direction: row;
             align-items: center;
             gap: 15px;
+            position: relative;
 
             #cep {
                 width: 220px;
+            }
+            svg {
+                position: absolute;
+                top: 24px;
+                left: 189px;
             }
             }
 

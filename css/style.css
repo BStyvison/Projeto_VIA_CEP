@@ -209,9 +209,15 @@ span.link {
   flex-direction: row;
   align-items: center;
   gap: 15px;
+  position: relative;
 }
 .menu__cep .form__cep__inside #cep {
   width: 220px;
+}
+.menu__cep .form__cep__inside svg {
+  position: absolute;
+  top: 24px;
+  left: 189px;
 }
 .menu__cep .form #endereco {
   background-color: rgb(241, 241, 241);
