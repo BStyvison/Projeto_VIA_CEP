@@ -49,7 +49,7 @@ const getAddress = async (cep) => {
             cityInput.value = dadosJson.localidade
             stateInput.value = dadosJson.uf
             toggleLoader()
-        }, 550)
+        }, 500)
 
         
 
@@ -58,7 +58,7 @@ const getAddress = async (cep) => {
         console.log(Error(erro))
         setTimeout(() => {
             toggleLoader()
-        }, 550)
+        }, 500)
 
     }
 
