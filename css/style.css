@@ -209,9 +209,15 @@ span.link {
   flex-direction: row;
   align-items: center;
   gap: 15px;
+  position: relative;
 }
 .menu__cep .form__cep__inside #cep {
   width: 220px;
+}
+.menu__cep .form__cep__inside svg {
+  position: absolute;
+  top: 24px;
+  left: 189px;
 }
 .menu__cep .form #endereco {
   background-color: rgb(241, 241, 241);
@@ -227,11 +233,14 @@ span.link {
   width: 220px;
   height: 48px;
   border-radius: 8px;
-  background-color: #f80032;
+  background-color: #fc0d1b;
   font-size: 16px;
   color: #ffffff;
   border: 0px;
   font-weight: bold;
+}
+.menu__cep .form button[disabled] {
+  background-color: #999999;
 }
 .menu__cep .form__numero {
   display: grid;
