@@ -4,6 +4,7 @@ const cityInput = document.querySelector("#cidade");
 const stateInput = document.querySelector('#estado')
 const districtInput = document.querySelector('#bairro')
 const hidderDisplay = document.querySelectorAll('[data-display]')
+const buttonSave = document.querySelector('#cep__btn')
 
 
 //validate CEP input
@@ -40,16 +41,23 @@ const getAddress = async (cep) => {
         const dadosJson = await responseDados.json()
 
         setTimeout(() => {
-            hidderDisplay.forEach(item => {
-                item.removeAttribute('data-display')
-            }) 
-    
-            addressInput.value = dadosJson.logradouro
-            districtInput.value = dadosJson.bairro
-            cityInput.value = dadosJson.localidade
-            stateInput.value = dadosJson.uf
+            if(dadosJson.logradouro === undefined) {
+                addressInput.value = ''
+                districtInput.value = ''
+                cityInput.value = ''
+                stateInput.value = ''
+            } else {
+                hidderDisplay.forEach(item => {
+                    item.removeAttribute('data-display')
+                }) 
+                addressInput.value = dadosJson.logradouro
+                districtInput.value = dadosJson.bairro
+                cityInput.value = dadosJson.localidade
+                stateInput.value = dadosJson.uf
+                buttonSave.removeAttribute('disabled')
+            }
             toggleLoader()
-        }, 550)
+        }, 500)
 
         
 
@@ -58,7 +66,7 @@ const getAddress = async (cep) => {
         console.log(Error(erro))
         setTimeout(() => {
             toggleLoader()
-        }, 550)
+        }, 500)
 
     }
 
