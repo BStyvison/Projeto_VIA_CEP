@@ -257,6 +257,9 @@ span.link {
 .menu__cep .form__toggle span {
   color: #666666;
 }
+.menu__cep .form #bntsave {
+  margin-top: 20px;
+}
 
 .cl-toggle-switch {
   position: relative;
