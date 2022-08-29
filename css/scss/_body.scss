@@ -9,6 +9,13 @@ span {
         padding-top: 23px;
     }
 }
+.hide {
+    display: none !important;
+  }
+
+[data-display] {
+    display: none !important;
+}
 
 .container {
     max-width: 1280px;

@@ -154,44 +154,47 @@
                         <div class="form__cep__inside">
                             <input type="text" name="cep" id="cep" placeholder="_____-___" minlength="8" maxlength="8" required>
                             <a href="https://buscacepinter.correios.com.br/app/endereco/index.php?t" target="_blank">não sei meu cep</a>
+                            <svg viewBox="25 25 50 50" class="form__cep__loader hide">
+                                <circle r="20" cy="50" cx="50"></circle>
+                            </svg>
                         </div>
                     </div>
 
 
-                    <div class="form__geral">
+                    <div class="form__geral" data-display>
                         <label for="endereco"><span>*</span>endereço</label>
                         <input type="text" name="endereco" id="endereco" required disabled>
                     </div>
 
 
-                    <div class="form__geral form__numero">
+                    <div class="form__geral form__numero" data-display>
                         <div class="form__caixa">
                             <label for="numero"><span>*</span>número</label>
                             <input type="text" name="numero" id="numero" required>
                         </div>
                         <span class="link">+ adicionar complemento</span>
                     </div>
-                    <span class="link">+ adicionar referência</span>
+                    <span class="link" data-display>+ adicionar referência</span>
 
 
-                    <div class="form__geral">
+                    <div class="form__geral" data-display>
                         <label for="bairro"><span>*</span>bairro</label>
                         <input type="text" name="bairro" id="bairro" cidade required disabled>
                     </div>
 
 
-                    <div class="form__geral">
+                    <div class="form__geral" data-display>
                         <label for="cidade"><span>*</span>cidade</label>
                         <input type="text" name="cidade" id="cidade" required disabled>
                     </div>
 
 
-                    <div class="form__geral">
+                    <div class="form__geral" data-display>
                         <label for="estado"><span>*</span>estado</label>
                         <input type="text" name="estado" id="estado" minlength="2" maxlength="2" required disabled>
                     </div>
 
-                    <div class="form__geral form__toggle">
+                    <div class="form__geral form__toggle" data-display>
                         <span>Endereço principal</span>
                         <div class="cl-toggle-switch">
                             <label class="cl-switch">
@@ -203,7 +206,7 @@
 
 
 
-                    <div class="form__geral" id="bntsave">
+                    <div class="form__geral" id="bntsave" >
                         <button id="cep__btn" type="submit">salvar endereço</button>
                     </div>
 

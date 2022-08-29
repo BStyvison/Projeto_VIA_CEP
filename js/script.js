@@ -3,6 +3,7 @@ const addressInput = document.querySelector("#endereco");
 const cityInput = document.querySelector("#cidade");
 const stateInput = document.querySelector('#estado')
 const districtInput = document.querySelector('#bairro')
+const hidderDisplay = document.querySelectorAll('[data-display]')
 
 
 //validate CEP input
@@ -37,7 +38,11 @@ const getAddress = async (cep) => {
         const responseDados = await fetch(apiUrl)
         const dadosJson = await responseDados.json()
 
-        console.log(dadosJson)
+
+        hidderDisplay.forEach(item => {
+            item.removeAttribute('data-display')
+        }) 
+
     
         
         addressInput.value = dadosJson.logradouro
@@ -54,5 +59,13 @@ const getAddress = async (cep) => {
 
 }
 
-// Show or hider loader
+// loader
+
+const toggleLoader = () => {
+    const loaderElement = document.querySelector('.form__cep__loader')
+    loaderElement.classList.toggle('hide')
+}
+
+
+
 
