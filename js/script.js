@@ -26,6 +26,15 @@ cepInput.addEventListener('keyup', verificarCep)
 
 function verificarCep(event) {
     const inputValue = event.target.value
+    const target = event.target
+
+    if(!target.checkValidity()) {
+        target.classList.add('invalido')
+        target.nextElementSibling.innerText = target.validationMessage;
+
+    }else {
+        target.classList.remove('invalido');
+      }
 
     if(inputValue.length === 8) {
         getAddress(inputValue)
