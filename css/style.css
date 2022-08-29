@@ -214,7 +214,7 @@ span.link {
 .menu__cep .form__cep__inside #cep {
   width: 220px;
 }
-.menu__cep .form__cep__inside svg {
+.menu__cep .form__cep__inside .lupa {
   position: absolute;
   top: 24px;
   left: 189px;
