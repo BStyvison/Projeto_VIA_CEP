@@ -18,7 +18,6 @@ function filterNumbers(event) {
         event.preventDefault()
         return
     }
-
 }
 
 //Get address event
