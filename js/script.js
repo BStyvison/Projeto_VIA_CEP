@@ -48,6 +48,8 @@ const getAddress = async (cep) => {
         const responseDados = await fetch(apiUrl)
         const dadosJson = await responseDados.json()
 
+        console.log(dadosJson.logradouro)
+
         setTimeout(() => {
             if(dadosJson.logradouro === undefined) {
                 addressInput.value = ''
